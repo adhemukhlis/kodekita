@@ -1,0 +1,25 @@
+{
+	"name": "kodekita",
+	"version": "1.0.0",
+	"description": "javascript reusable code collection",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"crypto-js": "^4.0.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/adhemukhlis/kodekita.git"
+	},
+	"keywords": [
+		"reusable", "code", "collection"
+	],
+	"author": "adhemukhlis",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/adhemukhlis/kodekita/issues"
+	},
+	"homepage": "https://github.com/adhemukhlis/kodekita#readme"
+}
