@@ -1,3 +1,3 @@
-import {getCookie} from "kodekita";
+import { getCookie } from "kodekita";
 
-getCookie('student');
+getCookie( 'student' );

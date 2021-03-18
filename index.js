@@ -1,5 +1,6 @@
 import { RabbitLegacy, enc } from "crypto-js";
-exports.initVariables = ({ devStatus, devLog, localhostStatus, disableReactDevTools }) => {
+export * from "./src/GreeterWord"
+exports.initGlobalTools = ({ devStatus, devLog, localhostStatus, disableReactDevTools }) => {
 	if ( devLog ) {
 		window.devLog = process.env.NODE_ENV === 'development' ? console
 			.log
@@ -69,11 +70,6 @@ exports.clearSession = ( ) => {
 		.sessionStorage
 		.clear( );
 }
-exports.greeterWord = ( name ) => {
-	const currentHour = new Date( ).getHours( );
-	const text = `Good ${ currentHour >= 3 && currentHour < 12 ? 'Morning' : currentHour >= 12 && currentHour < 15 ? 'Afternoon' : currentHour >= 15 && currentHour < 20 ? 'Evening' : currentHour >= 20 || currentHour < 3 ? 'Night' : '' }, ${ name }!`;
-	return text;
-}
 exports.idrCurrencyFormatter = ( val ) => {
 	return val === undefined || val === '' ? 'Rp -' : new Intl
 		.NumberFormat('id', {
@@ -122,4 +118,4 @@ exports.isJsonString = ( str ) => {
 	}
 	return true;
 }
-exports.promiseAll = async({ funcList }) => await Promise.all( funcList );
+exports.promiseAll = async( funcList ) => await Promise.all( funcList );
