@@ -71,10 +71,10 @@ window.devLog( 'this message will not appear after production!' ); //can be used
 ```
 Name | Description | Type | Config  
 --------|---------- | ----|------
-`window.devLog( all:log )`| same as `console.log`, but the logs will not be displayed after the `production` / `npm run build` | function |`devLog` : `true`
-`window.devStatus`| Global boolean variable that contains `true` if running under `development` | boolean |`devStatus` : `true` 
-`window.localhostStatus`| Global boolean variable that contains `true` if running under `localhost` | boolean|`localhostStatus` : `true` 
-*`*variables and functions are not needed`*| Configuring to disable [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi "React Developer Tools") extension. This feature is only needed if the browser uses the [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi "React Developer Tools") extension  | boolean|`disableReactDevTools` : `true` 
+<small>`window.devLog( all:log )`</small> | same as `console.log`, but the logs will not be displayed after the `production` / `npm run build` | <small>function</small> | <small>`devLog` : `true`</small>
+<small>`window.devStatus`</small> | Global boolean variable that contains `true` if running under `development` | <small>boolean</small> | <small>`devStatus` : `true`</small> 
+<small>`window.localhostStatus`</small>| Global boolean variable that contains `true` if running under `localhost` | <small>boolean</small>|<small>`localhostStatus` : `true`</small> 
+<small>*`*variables and functions are not needed`*</small>| Configuring to disable [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi "React Developer Tools") extension. This feature is only needed if the browser uses the [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi "React Developer Tools") extension  |<small>boolean</small>|<small>`disableReactDevTools` : `true`</small> 
 <br>
 
 ### promiseAll

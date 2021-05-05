@@ -1,6 +1,6 @@
 {
 	"name": "kodekita",
-	"version": "1.0.15",
+	"version": "1.0.16",
 	"description": "javascript reusable code collection",
 	"main": "index.js",
 	"scripts": {
