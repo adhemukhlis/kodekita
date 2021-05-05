@@ -1,6 +1,6 @@
 {
 	"name": "kodekita",
-	"version": "1.0.11",
+	"version": "1.0.15",
 	"description": "javascript reusable code collection",
 	"main": "index.js",
 	"scripts": {
@@ -23,5 +23,8 @@
 	"bugs": {
 		"url": "https://github.com/adhemukhlis/kodekita/issues"
 	},
-	"homepage": "https://github.com/adhemukhlis/kodekita#readme"
+	"homepage": "https://github.com/adhemukhlis/kodekita#readme",
+	"devDependencies": {
+		"embedme": "^1.22.0"
+	}
 }

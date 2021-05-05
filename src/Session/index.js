@@ -16,4 +16,7 @@ function clearSession( ) {
 		.sessionStorage
 		.clear( );
 }
-export { setSession, getSession, deleteSession, clearSession };
+exports.setSession = setSession;
+exports.getSession = getSession;
+exports.deleteSession = deleteSession;
+exports.clearSession = clearSession;

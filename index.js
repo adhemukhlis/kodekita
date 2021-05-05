@@ -1,23 +1,25 @@
-import { greeterWord } from "./src/GreeterWord";
-import { initGlobalTools } from "./src/InitGloballTools";
-import { cryptoRabbitEncrypt, cryptoRabbitDecrypt } from "./src/Crypto";
-import { setCookie, getCookie } from "./src/Cookie";
-import { setSession, getSession, deleteSession, clearSession } from "./src/Session";
-import { idrCurrencyFormatter, idrCurrencyParser } from "./src/Formatter";
-import { isJsonString } from "./src/Checking";
-import { promiseAll } from "./src/PromiseAll";
+const { greeterText } = require( "./src/GreeterText" );
+const { initGlobalTools } = require( "./src/InitGloballTools" );
+const { cryptoRabbitEncrypt, cryptoRabbitDecrypt } = require( "./src/Crypto" );
+const { setCookie, getCookie } = require( "./src/Cookie" );
+const { setSession, getSession, deleteSession, clearSession } = require( "./src/Session" );
+const { idrCurrencyFormatter, idrCurrencyParser } = require( "./src/Formatter" );
+const { isJsonString } = require( "./src/Checking" );
+const { promiseAll } = require( "./src/PromiseAll" );
 
-exports.initGlobalTools = initGlobalTools;
-exports.greeterWord = greeterWord;
-exports.cryptoRabbitEncrypt = cryptoRabbitEncrypt;
-exports.cryptoRabbitDecrypt = cryptoRabbitDecrypt;
-exports.setCookie = setCookie;
-exports.getCookie = getCookie;
-exports.setSession = setSession;
-exports.getSession = getSession;
-exports.deleteSession = deleteSession;
-exports.clearSession = clearSession;
-exports.idrCurrencyFormatter = idrCurrencyFormatter;
-exports.idrCurrencyParser = idrCurrencyParser;
-exports.isJsonString = isJsonString;
-exports.promiseAll = promiseAll;
+module.exports = {
+	initGlobalTools,
+	greeterText,
+	cryptoRabbitEncrypt,
+	cryptoRabbitDecrypt,
+	setCookie,
+	getCookie,
+	setSession,
+	getSession,
+	deleteSession,
+	clearSession,
+	idrCurrencyFormatter,
+	idrCurrencyParser,
+	isJsonString,
+	promiseAll
+};

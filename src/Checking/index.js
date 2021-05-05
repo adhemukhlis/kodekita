@@ -11,4 +11,4 @@ function isJsonString( str ) {
 	}
 	return true;
 }
-export { isJsonString };
+exports.isJsonString = isJsonString;

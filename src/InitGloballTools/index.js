@@ -20,4 +20,4 @@ function initGlobalTools({ devStatus, devLog, localhostStatus, disableReactDevTo
 		}
 	}
 }
-export { initGlobalTools };
+exports.initGlobalTools = initGlobalTools;

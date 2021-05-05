@@ -20,4 +20,5 @@ function getCookie( header ) {
 	}
 	return undefined;
 }
-export { setCookie, getCookie };
+exports.setCookie = setCookie;
+exports.getCookie = getCookie;

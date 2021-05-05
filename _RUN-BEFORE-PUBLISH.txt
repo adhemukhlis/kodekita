@@ -1,1 +1,3 @@
 npx embedme README.md
+change version
+npm publish

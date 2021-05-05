@@ -1,5 +1,5 @@
 # kodekita
-**Kodekita** is a collection of javascript code that can be reused, without rewriting the code.
+**Kodekita** is a collection of javascript code that can be reused without rewriting the code.
 
 ***
 
@@ -12,6 +12,7 @@
     - [isJsonString](#isjsonstring)  
     - [idrCurrencyFormatter](#idrcurrencyformatter)  
     - [idrCurrencyParser](#idrcurrencyparser)  
+    - [greeterText](#greeterText)  
     - [setSession](#setsession)  
     - [getSession](#getsession)  
     - [deleteSession](#deletesession)  
@@ -51,10 +52,13 @@ class App extends Component {
 
 export default App;
 ```
+<br>
 
 ## API
+<br>
+
 ### initGlobalTools
-`initGlobalTools()` will initiate a global variable or function that can be accessed freely without importing
+`initGlobalTools( object:config )` will initiate a global variable or function that can be accessed freely without importing
 
 <!-- embedme samples/init-global-tools.js -->
 ```js
@@ -65,15 +69,16 @@ initGlobalTools({ devStatus: true, devLog: true });
 console.log( window.devStatus ); // return true if it is under development
 window.devLog( 'this message will not appear after production!' ); //can be used to view logs only during development
 ```
-Name | Description | Type | Usage  
+Name | Description | Type | Config  
 --------|---------- | ----|------
-`window.devLog()`| same as `console.log`, but the logs will not be displayed after the `production` / `npm run build` | function | set `devLog` : `true`
-`window.devStatus`| Global Boolean variable that contains `true` if running under `development` | boolean |set `devStatus` : `true` 
-`window.localhostStatus`| Global Boolean variable that contains `true` if running under `localhost` | boolean|set `localhostStatus` : `true` 
-
+`window.devLog( all:log )`| same as `console.log`, but the logs will not be displayed after the `production` / `npm run build` | function |`devLog` : `true`
+`window.devStatus`| Global boolean variable that contains `true` if running under `development` | boolean |`devStatus` : `true` 
+`window.localhostStatus`| Global boolean variable that contains `true` if running under `localhost` | boolean|`localhostStatus` : `true` 
+*`*variables and functions are not needed`*| Configuring to disable [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi "React Developer Tools") extension. This feature is only needed if the browser uses the [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi "React Developer Tools") extension  | boolean|`disableReactDevTools` : `true` 
+<br>
 
 ### promiseAll
-`promiseAll()` will execute multiple functions asynchronously
+`promiseAll( list:functions )` will execute multiple functions asynchronously
 <!-- embedme samples/promise-all.js -->
 ```js
 import { promiseAll } from "kodekita";
@@ -82,34 +87,86 @@ function showLog( ) {
 }
 promiseAll([ showLog, showLog, showLog ]);
 ```
+<br>
+
 ### isJsonString
-`isJsonString()` will check and return true if string is a stringified JSON
+`isJsonString( string:jsonString )` will check and return true if string is a stringified JSON
 <!-- embedme samples/is-json-string.js -->
 ```js
 import { isJsonString } from "kodekita";
 const stringifiedJson = '{name:"Joko",gender:"male",city:"Bekasi"}';
 isJsonString( stringifiedJson ); //true
 ```
+<br>
+
 ### idrCurrencyFormatter
-`idrCurrencyFormatter()` will format integer into IDR currency format
+`idrCurrencyFormatter( number:currency )` will format integer into IDR currency format
 <!-- embedme samples/idr-currency-formatter.js -->
 ```js
 import { idrCurrencyFormatter } from "kodekita";
 idrCurrencyFormatter( 64000 ); //Rp 64000
 ```
+<br>
+
 ### idrCurrencyParser
-`idrCurrencyParser()` will parse IDR currency into integer
+`idrCurrencyParser( string:currency )` will parse IDR currency into integer
 <!-- embedme samples/idr-currency-parser.js -->
 ```js
 import { idrCurrencyParser } from "kodekita";
 idrCurrencyParser( 'Rp 64000' ); //64000
 ```
-<!-- ### greeterWord
+<br>
+
+### greeterText
+`greeterText( string:name )` will display greeter with name
+<!-- embedme samples/greeter-text.js -->
+```js
+import { greeterText } from "kodekita";
+
+greeterText( 'Joko' );
+```
+<br>
+
 ### setSession
+`setSession( string:header, string:value)` stores data to Session Storage.
+<!-- embedme samples/set-session.js -->
+```js
+import { setSession } from "kodekita";
+
+setSession( 'name', 'Joko' );
+```
+<br> 
+
 ### getSession
+`getSession( string:header )` get data from Session Storage.
+<!-- embedme samples/get-session.js -->
+```js
+import { getSession } from "kodekita";
+
+getSession( 'name' );
+```
+<br>
+
 ### deleteSession
+`deleteSession( string:header )` delete data from Session Storage.
+<!-- embedme samples/delete-session.js -->
+```js
+import { deleteSession } from "kodekita";
+
+deleteSession( 'name' );
+```
+<br>
+
 ### clearSession
-### setCookie
+`clearSession()` clear all data from Session Storage.
+<!-- embedme samples/clear-session.js -->
+```js
+import { clearSession } from "kodekita";
+
+clearSession( );
+```
+
+<!--### setCookie
 ### getCookie
 ### cryptoRabbitEncrypt
 ### cryptoRabbitDecrypt -->

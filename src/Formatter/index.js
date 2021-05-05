@@ -33,4 +33,5 @@ function idrCurrencyParser( val ) {
 		console.error( error );
 	}
 };
-export { idrCurrencyFormatter, idrCurrencyParser };
+exports.idrCurrencyFormatter = idrCurrencyFormatter;
+exports.idrCurrencyParser = idrCurrencyParser;

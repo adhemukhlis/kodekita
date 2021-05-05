@@ -1,4 +1,4 @@
 async function promiseAll( funcList ) {
 	return await Promise.all( funcList );
 };
-export { promiseAll };
+exports.promiseAll = promiseAll;
